@@ -23,8 +23,13 @@ data = {
     }
 }
 
-for date in data:
-    current_date = datetime.date(*map(int, date.split('-')))
-    print(current_date)
-    print(current_date-datetime.timedelta(1))
+for currency in data:
+    for date in data[currency]:
+        current_date = datetime.date(*map(int, date.split('-')))
+        print(current_date)
+        print(current_date-datetime.timedelta(1))
+
+
+print(float('7e-06'))
+print(float('7e-06')+1)
 

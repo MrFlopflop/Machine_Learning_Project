@@ -42,6 +42,7 @@ with open('transformed_dataset.csv', 'w') as outfile, open('crypto-markets.csv',
             else:
                 clss = 'STAY'
                 stay += 1
+            # We should have a look at these classifiers, maybe make them scale with the value
 
             outline = name + ',' + date + ',' + open + ',' + close + ',' + high + ',' + low + ',' + \
                       volume + ',' + market + ',' + clss + '\n'

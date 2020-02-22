@@ -32,9 +32,22 @@ with open('transformed_dataset.csv', 'r') as file:
 
         line = file.readline()
 
-for currency in data_dict:
-    try:
-        print(currency)
-        print(data_dict[currency]['2018-10-13'])
-    except:
-        pass
+# ----Testing stuff----
+
+sell = 0
+buy = 0
+stay = 0
+
+for date in data_dict['Bitcoin']:
+    print(data_dict['Bitcoin'][date])
+    clss = data_dict['Bitcoin'][date]['class']
+    if clss == 'BUY':
+        buy += 1
+    elif clss == 'SELL':
+        sell += 1
+    else:
+        stay += 1
+
+print('BUY: ' + str(buy))
+print('SELL: ' + str(sell))
+print('STAY: ' + str(stay))
