@@ -39,7 +39,7 @@ buy = 0
 stay = 0
 
 for date in data_dict['Bitcoin']:
-    print(data_dict['Bitcoin'][date])
+    # print(data_dict['Bitcoin'][date])
     clss = data_dict['Bitcoin'][date]['class']
     if clss == 'BUY':
         buy += 1
@@ -48,6 +48,6 @@ for date in data_dict['Bitcoin']:
     else:
         stay += 1
 
-print('BUY: ' + str(buy))
-print('SELL: ' + str(sell))
-print('STAY: ' + str(stay))
+# print('BUY: ' + str(buy))
+# print('SELL: ' + str(sell))
+# print('STAY: ' + str(stay))
