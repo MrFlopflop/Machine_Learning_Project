@@ -9,7 +9,7 @@ for date in data_dict['Bitcoin']:
     sample = data_dict['Bitcoin'][date]
     features = [float(sample['open'])]
     try:
-        for i in range(1, 30):
+        for i in range(1, 100):
             prev_date = str(datetime.date(*map(int, date.split('-')))-datetime.timedelta(i))
             prev = data_dict['Bitcoin'][prev_date]
             features.append(float(prev['open']))
