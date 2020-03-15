@@ -10,7 +10,7 @@ for coin in data_dict:
         sample = data_dict[coin][date]
         features = [float(sample['open'])]
         try:
-            for i in range(1, 14):
+            for i in range(1, 30):
                 prev_date = str(datetime.date(*map(int, date.split('-')))-datetime.timedelta(i))
                 prev = data_dict[coin][prev_date]
                 features.append(float(prev['open']))
@@ -20,7 +20,7 @@ for coin in data_dict:
                 features.append(float(prev['volume']))
                 features.append(float(prev['market']))
             x.append(features)
-            y.append(sample['class'])
+            y.append(sample['close'])
         except:
             pass
 
